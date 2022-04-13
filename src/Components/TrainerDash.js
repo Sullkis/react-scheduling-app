@@ -23,12 +23,23 @@ function TrainerDash({updateProfile,ud,Logout}) {
   
   return (
     <div className="TrainerDash">
-      {(ud.userType === "trainer") ? (
+      {(ud.userType === "trainer") ? ( 
         <div>
+        <div className="trainer-dash-box-smaller">
+        <button className="btn btn-pos1" >Create Course</button>
+        <button className="btn btn-pos1" >Create Course</button>
+        </div>
+        <div className="trainer-dash-box">
           <h1>Welcome, {ud.name}</h1>
-          <button onClick={formUpdate}>Update Profile</button>
-          <button>View Timetable</button>
-          <button onClick={Logout}>Logout</button>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <button className="btn btn-pos1" onClick={formUpdate}>Update Profile</button>
+          <button className="btn btn-pos1">View Timetable</button>
+          <button className="btn btn-pos" style={{backgroundColor:"#4427fa"}} onClick={Logout}>Logout</button>
           
   
         <p><b>Profile:</b>Skill(s): {ud.skill}, General Availability: {ud.availability}</p>
@@ -39,7 +50,7 @@ function TrainerDash({updateProfile,ud,Logout}) {
           <input type="text" name="availability" id="availability" value={profileData.availability} onChange={e => setProfileData({...profileData, availability: e.target.value})}/>
           <input type="submit" value="Update Profile"/>
         </form>}
-
+        </div>
         </div>
       ) : (
         <div>
